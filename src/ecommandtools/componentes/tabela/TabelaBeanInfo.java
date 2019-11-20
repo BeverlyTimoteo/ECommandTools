@@ -15,7 +15,7 @@ public class TabelaBeanInfo extends SimpleBeanInfo {
     @Override
     public BeanDescriptor getBeanDescriptor() {
         beanDescriptor = new BeanDescriptor(Tabela.class);
-        beanDescriptor.setName("ABV Tabela");
+        beanDescriptor.setName("Tabela");
 
         return beanDescriptor;
     }

@@ -7,8 +7,8 @@
 <!-- the Compile on Save feature is turned off for the project. -->
 <!-- You can turn off the Compile on Save (or Deploy on Save) setting -->
 <!-- in the project's Project Properties dialog box.-->
-<project name="ABVTools" default="default" basedir=".">
-    <description>Builds, tests, and runs the project ABVTools.</description>
+<project name="ECommandTools" default="default" basedir=".">
+    <description>Builds, tests, and runs the project ECommandTools</description>
     <import file="nbproject/build-impl.xml"/>
     <!--
 
@@ -58,7 +58,7 @@
 
     An example of overriding the target for project execution could look like this:
 
-        <target name="run" depends="ABVTools-impl.jar">
+        <target name="run" depends="ECommandTools-impl.jar">
             <exec dir="bin" executable="launcher.exe">
                 <arg file="${dist.jar}"/>
             </exec>
@@ -73,28 +73,31 @@
     
     <target name="-pre-init">
         <manifest file="MANIFEST.MF">
-            <section name="abvtools.componentes.botao.Botao.class">  
+            <section name="ecommandtools.componentes.botao.Botao.class">  
                 <attribute name="Java-Bean" value="true"/>     
             </section>
-            <section name="abvtools.componentes.campotexto.CampoTexto.class">  
+            <section name="ecommandtools.componentes.campotexto.CampoTexto.class">  
                 <attribute name="Java-Bean" value="true"/>     
             </section>
-            <section name="abvtools.componentes.combo.Combo.class">  
+            <section name="ecommandtools.componentes.combo.Combo.class">  
                 <attribute name="Java-Bean" value="true"/>     
             </section>
-            <section name="abvtools.componentes.rotulo.Rotulo.class">  
+            <section name="ecommandtools.componentes.rotulo.Rotulo.class">  
                 <attribute name="Java-Bean" value="true"/>     
             </section>
-            <section name="abvtools.componentes.tabela.Tabela.class">  
+            <section name="ecommandtools.componentes.tabela.Tabela.class">  
                 <attribute name="Java-Bean" value="true"/>     
             </section>
-            <section name="abvtools.componentes.checkbox.CheckBox.class">  
+            <section name="ecommandtools.componentes.checkbox.CheckBox.class">  
                 <attribute name="Java-Bean" value="true"/>     
             </section>  
-            <section name="abvtools.componentes.areatexto.AreaTexto.class">  
+            <section name="ecommandtools.componentes.areatexto.AreaTexto.class">  
                 <attribute name="Java-Bean" value="true"/>     
             </section>
-            <section name="abvtools.componentes.busca.BuscaDados.class">  
+            <section name="ecommandtools.componentes.busca.BuscaDados.class">  
+                <attribute name="Java-Bean" value="true"/>     
+            </section> 
+            <section name="ecommandtools.componentes.radiobotao.RadioBotao.class">  
                 <attribute name="Java-Bean" value="true"/>     
             </section> 
         </manifest>

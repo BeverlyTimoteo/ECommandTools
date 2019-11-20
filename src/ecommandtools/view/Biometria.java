@@ -209,14 +209,14 @@ public class Biometria extends JDialog implements ActionListener {
                                 break;
                             case EnrollmentThread.ACT_CAPTURE:
                                 if (evt.captureResult != null) {
-                                    Mensagens.MensagemInfo("Falha ao capturar biometria!\nVerifique a qualidade da biometria!");
+                                    Mensagens.mensagemInfo("Falha ao capturar biometria!\nVerifique a qualidade da biometria!");
 
                                 } else if (evt.exception != null) {
-                                    Mensagens.MensagemErro("Falha ao capturar biometria!");
+                                    Mensagens.mensagemErro("Falha ao capturar biometria!");
                                     Logger.getLogger(Biometria.class.getName()).log(Level.SEVERE, null, evt.exception);
 
                                 } else if (evt.readerStatus != null) {
-                                    Mensagens.MensagemInfo("Falha ao capturar biometria!\nVerifique o leitor!");
+                                    Mensagens.mensagemInfo("Falha ao capturar biometria!\nVerifique o leitor!");
                                 }
                                 iniciuCaptura = false;
                                 break;
@@ -233,7 +233,7 @@ public class Biometria extends JDialog implements ActionListener {
                                     lbMensagem.setText("Biometria capturada!");
 
                                 } else {
-                                    Mensagens.MensagemErro("Falha ao capturar biometria!");
+                                    Mensagens.mensagemErro("Falha ao capturar biometria!");
                                     Logger.getLogger(Biometria.class.getName()).log(Level.SEVERE, null, evt.exception);
                                 }
                                 iniciuCaptura = false;
@@ -247,7 +247,7 @@ public class Biometria extends JDialog implements ActionListener {
                                     setVisible(false);
 
                                 } else {
-                                    Mensagens.MensagemErro("Falha ao capturar biometria!");
+                                    Mensagens.mensagemErro("Falha ao capturar biometria!");
                                     Logger.getLogger(Biometria.class.getName()).log(Level.SEVERE, null, evt.exception);
                                 }
                                 break;
@@ -257,12 +257,12 @@ public class Biometria extends JDialog implements ActionListener {
                         }
 
                         if (evt.exception != null) {
-                            Mensagens.MensagemErro("Falha ao capturar biometria!");
+                            Mensagens.mensagemErro("Falha ao capturar biometria!");
                             Logger.getLogger(Biometria.class.getName()).log(Level.SEVERE, null, evt.exception);
                             this.setVisible(false);
 
                         } else if (evt.readerStatus != null && evt.readerStatus.status != Reader.ReaderStatus.READY && evt.readerStatus.status != Reader.ReaderStatus.NEED_CALIBRATION) {
-                            Mensagens.MensagemErro("Falha ao capturar biometria!");
+                            Mensagens.mensagemErro("Falha ao capturar biometria!");
                             Logger.getLogger(Biometria.class.getName()).log(Level.SEVERE, null, evt.exception);
                             this.setVisible(false);
 
@@ -295,18 +295,18 @@ public class Biometria extends JDialog implements ActionListener {
                                 cancelado = true;
 
                             } else {
-                                Mensagens.MensagemInfo("Falha ao capturar biometria!");
+                                Mensagens.mensagemInfo("Falha ao capturar biometria!");
                                 esperarCaptura();
                                 iniciarCaptura();
                             }
 
                         } else if (evt.ex != null) {
-                            Mensagens.MensagemErro("Falha ao capturar biometria!");
+                            Mensagens.mensagemErro("Falha ao capturar biometria!");
                             Logger.getLogger(Biometria.class.getName()).log(Level.SEVERE, null, evt.ex);
                             cancelado = true;
 
                         } else if (evt.readerStatus != null) {
-                            Mensagens.MensagemInfo("Falha ao capturar biometria!");
+                            Mensagens.mensagemInfo("Falha ao capturar biometria!");
                             cancelado = true;
                         }
 
@@ -319,7 +319,7 @@ public class Biometria extends JDialog implements ActionListener {
             }
 
         } catch (Exception ex) {
-            Mensagens.MensagemErro("Falha ao capturar biometria!");
+            Mensagens.mensagemErro("Falha ao capturar biometria!");
             Logger.getLogger(Biometria.class.getName()).log(Level.SEVERE, null, ex);
             setVisible(false);
         }
@@ -351,7 +351,7 @@ public class Biometria extends JDialog implements ActionListener {
         lbLink = new ecommandtools.componentes.rotulo.Rotulo();
         pnImagem = new javax.swing.JPanel();
         toolbarSair = new javax.swing.JToolBar();
-        btnSair = new ecommandtools.componentes.botao.Botao();
+        btnSair = new ecommandtools.componentes.radiobotao.RadioBotao();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setTitle("Informe a biometria");
@@ -387,7 +387,7 @@ public class Biometria extends JDialog implements ActionListener {
         toolbarSair.setRollover(true);
         toolbarSair.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
-        btnSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/abvtools/image/exit.png"))); // NOI18N
+        btnSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ecommandtools/image/exit.png"))); // NOI18N
         btnSair.setToolTipText("Sair");
         btnSair.setFocusable(false);
         btnSair.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -453,7 +453,7 @@ public class Biometria extends JDialog implements ActionListener {
     }//GEN-LAST:event_formWindowClosing
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private ecommandtools.componentes.botao.Botao btnSair;
+    private ecommandtools.componentes.radiobotao.RadioBotao btnSair;
     private ecommandtools.componentes.rotulo.Rotulo lbLink;
     private ecommandtools.componentes.rotulo.Rotulo lbMensagem;
     private javax.swing.JPanel pnFundo;

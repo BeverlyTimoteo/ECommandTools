@@ -63,5 +63,10 @@ public class Formatacao {
         String cpf = new DecimalFormat("00000000000").format(value);
         return cpf.substring(0, 3) + "." + cpf.substring(3, 6) + "." + cpf.substring(6, 9) + "-" + cpf.substring(9, 11);
     }
+    
+     public static String cnpj(long value) {
+        String cpf = new DecimalFormat("00000000000000").format(value);
+        return cpf.substring(0, 2) + "." + cpf.substring(2, 5) + "." + cpf.substring(5, 8) + "/" + cpf.substring(8, 12) + "-" + cpf.substring(12, 14);
+    }
 
 }

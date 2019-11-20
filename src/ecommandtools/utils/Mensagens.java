@@ -15,15 +15,15 @@ public class Mensagens {
     public static String MSG_SELECIONAR_ITENS_TABELA = "Selecione um registro!";
     public static String MSG_REGISTRO_NAO_ENCONTRADO = "Registro não encontrado!";
 
-    public static void MensagemInfo(String msg) {
+    public static void mensagemInfo(String msg) {
         JOptionPane.showMessageDialog(null, msg, "Atenção", JOptionPane.INFORMATION_MESSAGE);
     }
 
-    public static void MensagemErro(String msg) {
+    public static void mensagemErro(String msg) {
         JOptionPane.showMessageDialog(null, msg, "Atenção", JOptionPane.ERROR_MESSAGE);
     }
 
-    public static void Confirmacao(String msg, String titulo) throws Exception {
+    public static void confirmacao(String msg, String titulo) throws Exception {
         JButton botaosim = new JButton("Sim");
         JButton botaonao = new JButton("Não");
         Object[] botoes = {botaosim, botaonao};

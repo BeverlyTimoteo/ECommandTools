@@ -1,22 +1,17 @@
-package ecommandtools.componentes.checkbox;
+package ecommandtools.componentes.radiobotao;
 
 import java.awt.Image;
 import java.beans.BeanDescriptor;
-import static java.beans.BeanInfo.ICON_COLOR_16x16;
-import static java.beans.BeanInfo.ICON_COLOR_32x32;
-import static java.beans.BeanInfo.ICON_MONO_16x16;
-import static java.beans.BeanInfo.ICON_MONO_32x32;
 import java.beans.SimpleBeanInfo;
 
-public class CheckBoxBeanInfo extends SimpleBeanInfo {
+public class RadioBotaoBeanInfo extends SimpleBeanInfo {
 
     private BeanDescriptor beanDescriptor = null;
 
     @Override
     public BeanDescriptor getBeanDescriptor() {
-        beanDescriptor = new BeanDescriptor(CheckBox.class);
-        beanDescriptor.setName("CheckBox");
-
+        beanDescriptor = new BeanDescriptor(RadioBotao.class);
+        beanDescriptor.setName("Radio Botao");
         return beanDescriptor;
     }
 
@@ -25,10 +20,10 @@ public class CheckBoxBeanInfo extends SimpleBeanInfo {
         Image img = null;
 
         if (iconKind == ICON_COLOR_16x16 || iconKind == ICON_MONO_16x16) {
-            img = loadImage("checkbox16.png");
-
+            img = loadImage("radiobotao16.png");
+            
         } else if (iconKind == ICON_COLOR_32x32 || iconKind == ICON_MONO_32x32) {
-            img = loadImage("checkbox32.png");
+            img = loadImage("radiobotao32.png");
         }
 
         return img;

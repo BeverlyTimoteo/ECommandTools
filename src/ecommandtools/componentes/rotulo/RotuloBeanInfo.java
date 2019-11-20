@@ -18,7 +18,7 @@ public class RotuloBeanInfo extends SimpleBeanInfo {
     @Override
     public BeanDescriptor getBeanDescriptor() {
         beanDescriptor = new BeanDescriptor(Rotulo.class);
-        beanDescriptor.setName("ABV Rotulo");
+        beanDescriptor.setName("Rotulo");
         return beanDescriptor;
     }
 

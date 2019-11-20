@@ -15,7 +15,7 @@ public class ComboBeanInfo extends SimpleBeanInfo {
     @Override
     public BeanDescriptor getBeanDescriptor() {
         beanDescriptor = new BeanDescriptor(Combo.class);
-        beanDescriptor.setName("ABV ComboBox");
+        beanDescriptor.setName("ComboBox");
         return beanDescriptor;
     }
 

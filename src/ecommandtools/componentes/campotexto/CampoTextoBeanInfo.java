@@ -18,7 +18,7 @@ public class CampoTextoBeanInfo extends SimpleBeanInfo {
     @Override
     public BeanDescriptor getBeanDescriptor() {
         beanDescriptor = new BeanDescriptor(CampoTexto.class);
-        beanDescriptor.setName("ABV TextField");
+        beanDescriptor.setName("TextField");
         return beanDescriptor;
     }
 

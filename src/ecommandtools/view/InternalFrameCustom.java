@@ -1,5 +1,7 @@
 package ecommandtools.view;
 
+import ecommandtools.exception.ExceptionConfirm;
+import ecommandtools.exception.ExceptionCustom;
 import java.awt.Cursor;
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
@@ -77,8 +79,9 @@ public class InternalFrameCustom extends JInternalFrame {
             @Override
             public void actionPerformed(ActionEvent ae) {
                 try {
-                    Mensagens.Confirmacao("Deseja sair desta página?", getTitle());
+                    Mensagens.confirmacao("Deseja sair desta página?", getTitle());
                     dispose();
+                } catch (ExceptionConfirm ec) {
                 } catch (Exception ex) {
                     Exceptions.printStackTrace(ex);
                 }

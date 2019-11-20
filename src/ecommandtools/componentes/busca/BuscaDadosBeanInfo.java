@@ -20,7 +20,7 @@ public class BuscaDadosBeanInfo extends SimpleBeanInfo {
     @Override
     public BeanDescriptor getBeanDescriptor() {
         bean = new BeanDescriptor(BuscaDados.class);
-        bean.setDisplayName("ABV Busca");
+        bean.setDisplayName("Busca");
         return bean;
     }
 

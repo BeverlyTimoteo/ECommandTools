@@ -1,5 +1,7 @@
 package ecommandtools.componentes.botao;
 
+import ecommandtools.componentes.radiobotao.RadioBotao;
+import ecommandtools.componentes.radiobotao.RadioBotaoBeanInfo;
 import java.awt.Image;
 import java.beans.BeanDescriptor;
 import java.beans.BeanInfo;
@@ -17,20 +19,20 @@ public class BotaoBeanInfo extends SimpleBeanInfo {
 
     @Override
     public BeanDescriptor getBeanDescriptor() {
-        beanDescriptor = new BeanDescriptor(Botao.class);
-        beanDescriptor.setName("ABV Botao");
+        beanDescriptor = new BeanDescriptor(RadioBotao.class);
+        beanDescriptor.setName("Botao");
         return beanDescriptor;
     }
 
     @Override
     public PropertyDescriptor[] getPropertyDescriptors() {
         try {
-            PropertyDescriptor pd = new PropertyDescriptor("highlightForeground", Botao.class, "getNovaForeground", "setNovaForeground");
+            PropertyDescriptor pd = new PropertyDescriptor("highlightForeground", RadioBotao.class, "getNovaForeground", "setNovaForeground");
 
             return new PropertyDescriptor[]{pd};
 
         } catch (IntrospectionException ex) {
-            Logger.getLogger(BotaoBeanInfo.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(RadioBotaoBeanInfo.class.getName()).log(Level.SEVERE, null, ex);
         }
 
         return null;
@@ -39,12 +41,12 @@ public class BotaoBeanInfo extends SimpleBeanInfo {
     @Override
     public BeanInfo[] getAdditionalBeanInfo() {
         try {
-            BeanInfo bi = Introspector.getBeanInfo(Botao.class.getSuperclass());
+            BeanInfo bi = Introspector.getBeanInfo(RadioBotao.class.getSuperclass());
 
             return new BeanInfo[]{bi};
 
         } catch (IntrospectionException ex) {
-            Logger.getLogger(BotaoBeanInfo.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(RadioBotaoBeanInfo.class.getName()).log(Level.SEVERE, null, ex);
         }
 
         return null;
@@ -57,7 +59,7 @@ public class BotaoBeanInfo extends SimpleBeanInfo {
 
             return bi.getMethodDescriptors();
         } catch (IntrospectionException ex) {
-            Logger.getLogger(BotaoBeanInfo.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(RadioBotaoBeanInfo.class.getName()).log(Level.SEVERE, null, ex);
         }
 
         return null;

@@ -1,6 +1,6 @@
 package ecommandtools.componentes.busca;
 
-import ecommandtools.componentes.botao.Botao;
+import ecommandtools.componentes.radiobotao.RadioBotao;
 import ecommandtools.componentes.campotexto.CampoTexto;
 import ecommandtools.componentes.campotexto.TipoFormato;
 import ecommandtools.connection.Conexao;
@@ -25,7 +25,7 @@ public class BuscaDados extends Container {
     private BuscaDadosEvento eventoBusca;
     private CampoTexto txtCodigo;
     private CampoTexto txtDescricao;
-    private Botao btnBusca;
+    private RadioBotao btnBusca;
     public int columns;
     private String tabela;
     private int id;
@@ -52,12 +52,12 @@ public class BuscaDados extends Container {
         txtCodigo.setTipoformato(TipoFormato.NUMERO.getDescricao());
         txtCodigo.setPreferredSize(new Dimension(70, 20));
 
-        btnBusca = new Botao();
+        btnBusca = new RadioBotao();
         btnBusca.setToolTipText("Abrir Busca");
         btnBusca.setFocusable(false);
         btnBusca.setOpaque(false);
         btnBusca.setPreferredSize(new Dimension(22, 20));
-        btnBusca.setIcon(new ImageIcon(getClass().getResource("/componentes/busca/buscar16.png")));
+        btnBusca.setIcon(new ImageIcon(getClass().getResource("/ecommandtools/componentes/busca/buscar16.png")));
 
         txtDescricao = new CampoTexto();
         txtDescricao.setPreferredSize(new Dimension(250, 20));

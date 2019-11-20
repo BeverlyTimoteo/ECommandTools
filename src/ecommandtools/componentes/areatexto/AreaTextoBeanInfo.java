@@ -15,7 +15,7 @@ public class AreaTextoBeanInfo extends SimpleBeanInfo {
     @Override
     public BeanDescriptor getBeanDescriptor() {
         beanDescriptor = new BeanDescriptor(AreaTexto.class);
-        beanDescriptor.setName("ABV Area Texto");
+        beanDescriptor.setName("Area Texto");
 
         return beanDescriptor;
     }

@@ -11,7 +11,7 @@ public class Main {
         try {
             LookAndFeelCustom.set();
 
-            JOptionPane.showMessageDialog(null, "ABVTools!");
+            JOptionPane.showMessageDialog(null, "ECommandTools!");
 
         } catch (Exception ex) {
             Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
