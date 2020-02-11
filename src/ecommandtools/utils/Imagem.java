@@ -3,7 +3,13 @@ package ecommandtools.utils;
 import java.awt.Color;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
+import java.util.Base64;
+import javax.imageio.ImageIO;
 
 public class Imagem {
 
@@ -27,4 +33,21 @@ public class Imagem {
         return image;
     }
 
+    public BufferedImage getImage(File f) throws Exception {
+        return ImageIO.read(f);
+    }
+
+    public String bufferedImageToBase64(BufferedImage imagem, String formatName) throws Exception {
+        ByteArrayOutputStream os = new ByteArrayOutputStream();
+
+        ImageIO.write(imagem, formatName, os);
+        os.flush();
+
+        return Base64.getEncoder().encodeToString(os.toByteArray());
+    }
+
+    public BufferedImage base64ToBufferedImage(String imagem) throws Exception {
+        InputStream in = new ByteArrayInputStream(Base64.getDecoder().decode(imagem));
+        return ImageIO.read(in);
+    }
 }
