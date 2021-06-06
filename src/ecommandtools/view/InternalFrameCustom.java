@@ -1,7 +1,6 @@
 package ecommandtools.view;
 
 import ecommandtools.exception.ExceptionConfirm;
-import ecommandtools.exception.ExceptionCustom;
 import java.awt.Cursor;
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
